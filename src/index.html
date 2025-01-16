@@ -1,1 +1,150 @@
-$null 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма для регистрации</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+margin: 0;
+@media (min-width: 344px) {
+    .aside {
+flex-wrap: wrap;
+flex: 0 0 33%;
+margin: auto;
+min-height: 1px;
+}
+.container {
+flex-wrap: wrap;
+flex: 0 0 66.666667%;
+margin: 20% 15% 20%;
+min-height: 1px;
+max-width: 70%;
+}
+}
+@media (min-width: 768px) {
+.aside {
+flex-wrap: wrap;
+flex: 0 0 25%;
+margin: auto;
+min-height: 1px;
+}
+.container {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+flex: 0 0 75%;
+margin:  5% auto 20%;
+min-height: 1px;
+max-width: 50%;
+}
+}
+@media (min-width: 1024px) {
+.aside {
+flex-wrap: wrap;
+flex: 0 0 50%;
+margin: auto;
+min-height: 1px;
+}
+.container {
+display: flex;
+justify-content: center;
+flex: 0 0 40%;
+margin: 5% 30% 20%;
+min-height: 1px;
+max-width: 40%;
+}
+}
+@media (min-width: 1280px) {
+.aside {
+flex-wrap: wrap;
+flex: 0 0 50%;
+margin: auto;
+min-height: 1px;
+}
+.container {
+display: flex;
+justify-content: center;
+flex: 0 0 100%;
+margin: 5% auto 20%;
+min-height: 1px;
+max-width: 50%;
+}
+}
+@media (min-width: 1920px) {
+.aside {
+flex-wrap: wrap;
+flex: 0 0 100%;
+margin: auto;
+min-height: 1px;
+}
+.container {
+display: flex;
+justify-content: center;
+flex: 0 0 100%;
+margin: 5% auto 20%;
+min-height: 1px;
+max-width: 100%;
+}
+}
+}
+</style>
+</head>
+
+<body>
+<div class="aside">
+    <div style="float:left;" class="form">
+    <form  method="post" action="/register/">
+        <table>
+            <tr>
+                <td><label for="loginField">Логин</label></td>
+                <td><input class="input-table" for="loginField" type="text" name="login"></td>
+            </tr>
+            <tr>
+                <td><label for="passwordField">Пароль</label></td>
+                <td><input class="input-table" id="passwordField" type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center"><input style="margin: 5px;box-shadow: 2px 3px 6px" type="submit" value="Зарегистрироваться" ></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div style="float:right;" class="form">
+    <form  action="login" method="post";>
+        <table>
+            <tr>
+                <td><label for="loginField">Логин</label></td>
+                <td><input class="input-table" id="loginField" type="text" name="login"></td>
+            </tr>
+            <tr>
+                <td><label for="passwordField">Пароль</label></td>
+                <td><input class="input-table" id="passwordField" type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center "><input style="margin: 5px; box-shadow: 2px 3px 6px" type="submit" value="Авторизоваться"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</div>
+
+<div class="container";>
+    <fieldset>
+        <legend><strong>Ваши задачи</strong></legend>
+            <ol class="todo-list">
+            <li>Сделать задание</li>
+            <li>Отправить задание на проверку</li>
+            </ol>
+            <form class="todo-form" action="" method="post">
+                <label class="input-label" for="todo-input"><strong>Добавить задачу</strong></label>
+                <input type="text" class="todo-input" id="todo-input" required>
+                <button type="submit" class="todo-add">Добавить</button>
+            </form>
+    </fieldset>
+</div>
+
+</body>
+</html>
